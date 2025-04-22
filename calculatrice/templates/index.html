@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+    <title>calculatrice </title>
+    <style>
+        body {
+            justify-content: center;
+            align-content: center;
+            display: flex;
+        }
+
+        .calculatrice {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+
+            padding: 10px;
+            margin-top: 50px;
+            background-color: rgba(0, 0, 0, 0.292);
+            height: fit-content;
+            width: fit-content;
+            border-radius: 20px;
+            box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            justify-content: center;
+            align-content: center;
+            display: block;
+        }
+
+        .ligne {
+            justify-content: center;
+            align-content: center;
+            display: flex;
+        }
+
+        .ecran {
+            border-radius: 5px;
+            border: 0px transparent;
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1 class="text-center">CALCULATRICE</h1>
+        <div class="calculatrice">
+
+            <form method="POST" class="content">
+                {% csrf_token %}
+                <div class="m-2">
+                    <input name="ecran" type="text" class="ligne ecran form-control" value="{{ ecran }}" readonly>
+                </div>
+                <div class="ligne">
+                    <div class="m-2">
+                        <button name="btn" value="1" class="btn btn-secondary ">1</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="2" class="btn btn-secondary ">2</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="3" class="btn btn-secondary ">3</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="+" class="btn btn-secondary ">+</button>
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="m-2">
+                        <button name="btn" value="4" class="btn btn-secondary ">4</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="5" class="btn btn-secondary ">5</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="6" class="btn btn-secondary ">6</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="-" class="btn btn-secondary ">-</button>
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="m-2">
+                        <button name="btn" value="7" class="btn btn-secondary ">7</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="8" class="btn btn-secondary ">8</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="9" class="btn btn-secondary ">9</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="*" class="btn btn-secondary "> * </button>
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="m-2">
+                        <button name="btn" value="√(" class="btn btn-secondary ">√(</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="0" class="btn btn-secondary ">0</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="." class="btn btn-secondary ">.</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="btn" value="/" class="btn btn-secondary ">/</button>
+                    </div>
+                </div>
+                <div class="ligne">
+                    <div class="m-2">
+                        <button name="btn" value=")" class="btn btn-secondary ">)</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="clear" value="ok" class="btn btn-secondary ">C</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="delete" value="del" class="btn btn-secondary ">⌫</button>
+                    </div>
+                    <div class="m-2">
+                        <button name="submit" value="=" class="btn btn-primary ">=</button>
+                        <!-- <button name="btn" value=">" class="btn btn-secondary ">></button> -->
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+body{
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.calculatrice { 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+    padding: 10px;
+    margin-top: 50px; 
+    background-color: rgba(0, 0, 0, 0.292);
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px;
+    box-shadow: -5px 5px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    justify-content: center;
+    align-content: center;
+    display: block;
+}
+.ligne {
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+.ecran {
+    border-radius: 5px;
+    border: 0px transparent;
+    height: 40px;
+}
