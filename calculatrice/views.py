@@ -31,5 +31,3 @@ def index(request):
                 ecran =''  
         
     return render(request, "index.html", {"ecran":ecran})
-
-
